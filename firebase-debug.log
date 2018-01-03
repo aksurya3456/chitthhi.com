@@ -1,0 +1,111 @@
+[debug] [2018-01-03T13:56:34.301Z] ----------------------------------------------------------------------
+[debug] [2018-01-03T13:56:34.306Z] Command:       /home/abhishek/.linuxbrew/Cellar/node/7.6.0/bin/node /home/abhishek/.linuxbrew/bin/firebase deploy
+[debug] [2018-01-03T13:56:34.307Z] CLI Version:   3.16.0
+[debug] [2018-01-03T13:56:34.307Z] Platform:      linux
+[debug] [2018-01-03T13:56:34.307Z] Node Version:  v7.6.0
+[debug] [2018-01-03T13:56:34.307Z] Time:          Wed Jan 03 2018 19:26:34 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:34.307Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-03T13:56:34.317Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-03T13:56:34.317Z] > authorizing via signed-in user
+[debug] [2018-01-03T13:56:34.319Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/chitthhi-com  
+  
+ Wed Jan 03 2018 19:26:34 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:35.792Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-03T13:56:35.793Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/chitthhi-com/tokens  
+  
+ Wed Jan 03 2018 19:26:35 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:36.722Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'chitthhi-com'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-01-03T13:56:38.209Z] >>> HTTP REQUEST PUT https://chitthhi-com.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+ 
+ Wed Jan 03 2018 19:26:38 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:39.522Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database chitthhi-com is valid
+[debug] [2018-01-03T13:56:39.523Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/chitthhi-com  
+  
+ Wed Jan 03 2018 19:26:39 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:41.235Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-01-03T13:56:41.237Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chitthhi-com:test  
+ { source: { files: [ [Object] ] } } 
+ Wed Jan 03 2018 19:26:41 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:42.363Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-01-03T13:56:42.364Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chitthhi-com:test  
+ { source: { files: [ [Object] ] } } 
+ Wed Jan 03 2018 19:26:42 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:43.449Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-01-03T13:56:43.450Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.4.2",
+    "firebase-functions": "^0.7.1"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-01-03T13:56:43.450Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/chitthhi-com?view=CONSUMER_VIEW  
+  
+ Wed Jan 03 2018 19:26:43 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:43.451Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/chitthhi-com?view=CONSUMER_VIEW  
+  
+ Wed Jan 03 2018 19:26:43 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:45.249Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-03T13:56:45.260Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2018-01-03T13:56:45.261Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/chitthhi-com  
+  
+ Wed Jan 03 2018 19:26:45 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:45.261Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/chitthhi-com/apiKeys  
+  
+ Wed Jan 03 2018 19:26:45 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:46.746Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-03T13:56:46.885Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-01-03T13:56:46.888Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chitthhi-com/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Wed Jan 03 2018 19:26:46 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:48.006Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-03T13:56:48.008Z] [rules] created ruleset projects/chitthhi-com/rulesets/d1c024e0-1db8-4c9c-a6fb-143ab979cdcb
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-01-03T13:56:48.012Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chitthhi-com/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Wed Jan 03 2018 19:26:48 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:48.014Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/chitthhi-com/databases/(default)/indexes  
+  
+ Wed Jan 03 2018 19:26:48 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:49.198Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-03T13:56:49.198Z] [rules] created ruleset projects/chitthhi-com/rulesets/252b9ceb-e357-4843-936b-4d09e7a35f89
+[debug] [2018-01-03T13:56:50.074Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-01-03T13:56:54.853Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/chitthhi-com/configs  
+  
+ Wed Jan 03 2018 19:26:54 GMT+0530 (IST)
+[debug] [2018-01-03T13:56:55.388Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-01-03T13:56:55.821Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/chitthhi-com/uploads/-L1wIq-pyuw5tZH9Tidv?fileCount=2&message=  
+  
+ Wed Jan 03 2018 19:26:55 GMT+0530 (IST)
+[debug] [2018-01-03T13:57:09.942Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-03T13:57:09.943Z] [hosting] .tgz uploaded successfully, waiting for extraction
